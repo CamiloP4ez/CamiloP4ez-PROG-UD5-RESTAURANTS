@@ -33,7 +33,6 @@ public class Main {
                     keepAsking = false;
 
                 default:
-                    keepAsking = false;
                     break;
             }
         }

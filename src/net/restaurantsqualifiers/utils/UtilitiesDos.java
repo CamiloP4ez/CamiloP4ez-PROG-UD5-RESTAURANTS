@@ -17,8 +17,6 @@ public class UtilitiesDos {
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(null,
                     "Debes ingresar un numero, la calificacion de tu restaurante\n Sera un cero por ahora, tienes que editarla");
-
-        } finally {
             rate = 0;
 
         }
