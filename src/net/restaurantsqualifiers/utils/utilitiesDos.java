@@ -9,8 +9,20 @@ public class UtilitiesDos {
         String name = JOptionPane.showInputDialog("dame el nombre de tu restaurante");
         String location = JOptionPane.showInputDialog("dame la ubicacion de tu restaurante");
         String schedule = JOptionPane.showInputDialog("dame el horario de tu restaurante");
-        float rate = Float
-                .parseFloat(JOptionPane.showInputDialog("dame la calificacion de tu restaurante"));
+        float rate;
+        try {
+            rate = Float
+                    .parseFloat(JOptionPane.showInputDialog("dame la calificacion de tu restaurante"));
+
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null,
+                    "Debes ingresar un numero, la calificacion de tu restaurante\n Sera un cero por ahora, tienes que editarla");
+
+        } finally {
+            rate = 0;
+
+        }
+
         Restaurant newRestaurant = new Restaurant(name, location, schedule, rate);
         return newRestaurant;
     }
