@@ -26,6 +26,7 @@ public class Manager {
     }
 
     public void showRestaurants() {
+
         for (int i = 0; i < restaurants.size(); i++) {
             JOptionPane.showMessageDialog(null, restaurants.get(i).toString());
         }
@@ -62,8 +63,14 @@ public class Manager {
     }
 
     public void sortRestaurants() {
-        Collections.sort(restaurants, (r1, r2) -> Float.compare(r2.getRate(), r1.getRate()));
-        JOptionPane.showMessageDialog(null, restaurants.toString());
+        if (restaurants.size() > 0) {
+            Collections.sort(restaurants, (r1, r2) -> Float.compare(r2.getRate(), r1.getRate()));
+            JOptionPane.showMessageDialog(null, restaurants.toString());
+
+        } else {
+            JOptionPane.showMessageDialog(null, "no hay restaurantes");
+
+        }
     }
 
     public void deleteRestaurant(String name) {

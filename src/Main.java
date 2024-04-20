@@ -8,6 +8,7 @@ public class Main {
         Manager manager = new Manager();
         boolean keepAsking = true;
         while (keepAsking) {
+
             switch (Menu.printMenu()) {
                 case 1:
                     manager.addRestaurant(UtilitiesDos.getInfo());
@@ -28,11 +29,15 @@ public class Main {
                     name = JOptionPane.showInputDialog("dame el nombre del restaurante a modificar");
                     manager.deleteRestaurant(name);
                     break;
+                case 0:
+                    keepAsking = false;
 
                 default:
+                    keepAsking = false;
                     break;
             }
         }
+        JOptionPane.showMessageDialog(null, "Adios saitama");
 
     }
 }
