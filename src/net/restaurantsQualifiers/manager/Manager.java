@@ -31,7 +31,7 @@ public class Manager {
         }
     }
 
-    public void editRestaurant(String name) {
+    public void updateRestaurant(String name) {
         for (int i = 0; i < restaurants.size(); i++) {
             if (name.equals(restaurants.get(i).getName())) {
                 switch (Menu.printMenuEdit()) {
