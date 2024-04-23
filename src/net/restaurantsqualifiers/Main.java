@@ -1,4 +1,4 @@
-package net.restaurantRater;
+package net.restaurantsqualifiers;
 
 import javax.swing.JOptionPane;
 import net.restaurantsqualifiers.manager.Manager;
