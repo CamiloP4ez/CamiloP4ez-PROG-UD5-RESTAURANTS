@@ -1,3 +1,5 @@
+package net.restaurantsqualifiers;
+
 import javax.swing.JOptionPane;
 import net.restaurantsqualifiers.manager.Manager;
 import net.restaurantsqualifiers.menu.Menu;
